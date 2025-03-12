@@ -48,6 +48,9 @@
       transform: scale(1, 0.6);
       z-index: 2;
       
+      cursor: pointer;
+      transition: height 0.1s ease-in-out, transform 0.1s ease-in-out;
+      
     }
     
     .button::before {
@@ -61,6 +64,10 @@
       background-color: black;
       transform: scale(1, 0.6);
       z-index: 1;
+    }
+    
+    .button::after {
+      
     }
     
     .rim-bin {
@@ -95,6 +102,15 @@
       border-radius: 50%;
       background-color: blue;
       transform: scale(1, 0.87);
+    }
+    
+    .button:active {
+      height: 420px;
+      bottom: 225px;
+    }
+    
+    .rim:active {
+      
     }
     
   
