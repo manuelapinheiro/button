@@ -45,7 +45,8 @@
       
       border-radius: 50%/90px;
       background-color: red;
-      transform: scale(1, 0.6)
+      transform: scale(1, 0.6);
+      z-index: 2;
       
     }
     
@@ -62,6 +63,40 @@
       z-index: 1;
     }
     
+    .rim-bin {
+      width: 100vw;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+    }
+    
+    .rim {
+      position: relative;
+      display: flex;
+      width: 350px;
+      height: 260px;
+      top: 270px;
+      
+      border-radius: 50%/90px;
+      background-color: white;
+      transform: scale(1, 0.6);
+      z-index: ;
+    }
+    
+    .rim::after {
+      content: '';
+      position: relative;
+      width: 350px;
+      height: 260px;
+      bottom: 50px;
+      
+      border-radius: 50%;
+      background-color: blue;
+      transform: scale(1, 0.87);
+    }
+    
   
   </style>
   
@@ -73,7 +108,15 @@
       
         <div class="button"></div>
         
+        
       </div>
+      
+      <div class="rim-bin">
+        
+        <div class="rim"></div>
+      
+      </div>
+      
       
       
     </div>
