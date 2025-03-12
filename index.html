@@ -11,19 +11,55 @@
     * { box-sizing: border-box; }
     
     body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
     
     .frame {
-    position: relative;
-    width: 1000px;
-    height: 700px;
-    border: 1px solid black;
-    background-image: url()
+      position: relative;
+      width: 1000px;
+      height: 700px;
+      border: 1px solid black;
+      background: linear-gradient(0deg, rgba(147,147,147,1) 0%, rgba(161,161,161,1) 12%, rgba(153,153,153,1) 26%, rgba(164,164,164,1) 35%, rgba(126,126,126,1) 50%, rgba(111,109,109,1) 60%, rgba(159,159,159,1) 78%, rgba(121,121,121,1) 88%, rgba(144,144,144,1) 94%, rgba(136,136,136,1) 100%);
+    }
+    
+    .button-bin {
+      width: 100vw;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+    }
+    
+    .button {
+      position: relative;
+      display: flex;
+      width: 300px;
+      height: 400px;
+      top: 100px;
+       
+      
+      border-radius: 50%/90px;
+      background-color: red;
+      transform: scale(1, 0.6)
+      
+    }
+    
+    .button::before {
+      content: '';
+      position: relative;
+      width: 300px;
+      height: 300px;
+      bottom: 70px;
+      
+      border-radius: 50%;
+      background-color: black;
+      transform: scale(1, 0.6);
+      z-index: 1;
     }
     
   
@@ -32,6 +68,14 @@
   <body>
     
     <div class="frame">
+      
+      <div class="button-bin">
+      
+        <div class="button"></div>
+        
+      </div>
+      
+      
     </div>
     
   </body>
