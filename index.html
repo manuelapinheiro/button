@@ -18,6 +18,16 @@
       margin: 0;
     }
     
+    @font-face {
+        font-family: "checkpoint_charlie";
+        src: url(checkpoint_charlie.ttf);
+      }
+    
+    @font-face {
+        font-family: "dirty_war";
+        src: url(dirty_war.otf);
+      }
+    
     .frame {
       position: relative;
       width: 1000px;
@@ -90,7 +100,7 @@
     
     .rim::after {
       content: '';
-      position: relative;
+      position: absolute;
       width: 350px;
       height: 260px;
       bottom: 50px;
@@ -101,24 +111,36 @@
       z-index: 7;
     }
     
-    .rim::before {
-      content: '';
-      position: absolute;
+    .shadow {
+      position: relative;
+      display: flex;
       width: 350px;
       height: 350px;
-      top: 100px;
+      top: 250px;
+      left: 140px;
       transform: scale(1, 0.6);
       
       
       background: black;
       border-radius: 50%;
       filter: blur(450px);
-      z-index: -1;
+      z-index: 1;
     }
     
     .button:active {
       height: 354px;
       margin-top: 25px; 
+    }
+    
+   
+    
+    .press {
+      font-size: 100px;
+      font-family: "dirty_war";
+      position: absolute;
+      top: 6%;
+      width: 100%;
+      text-align: center;
     }
     
   
@@ -140,7 +162,11 @@
       
       </div>
       
+      <div class="shadow"></div>
       
+      <div class="press"> DO NOT PRESS </div>
+      
+
       
     </div>
     
