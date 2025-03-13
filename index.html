@@ -23,7 +23,7 @@
       width: 1000px;
       height: 700px;
       border: 1px solid black;
-      background: linear-gradient(0deg, rgba(147,147,147,1) 0%, rgba(161,161,161,1) 12%, rgba(153,153,153,1) 26%, rgba(164,164,164,1) 35%, rgba(126,126,126,1) 50%, rgba(111,109,109,1) 60%, rgba(159,159,159,1) 78%, rgba(121,121,121,1) 88%, rgba(144,144,144,1) 94%, rgba(136,136,136,1) 100%);
+      background: hsl(203, 100%, 71%);
     }
     
     .button-bin {
@@ -44,9 +44,9 @@
        
       
       border-radius: 50%/90px;
-      background-color: red;
+      background: linear-gradient(90deg, rgba(177,26,26,1) 0%, rgba(230,30,30,1) 50%, rgba(177,26,26,1) 100%);
       transform: scale(1, 0.6);
-      z-index: 2;
+      z-index: 10;
       
       cursor: pointer;
       transition: padding 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -61,13 +61,9 @@
       bottom: 70px;
       
       border-radius: 50%;
-      background-color: black;
+      background: radial-gradient(circle, rgba(144,21,21,1) 0%, rgba(212,28,28,1) 0%, rgba(144,21,21,1) 100%);
       transform: scale(1, 0.6);
-      z-index: 1;
-    }
-    
-    .button::after {
-      
+      z-index: 9;
     }
     
     .rim-bin {
@@ -89,7 +85,7 @@
       border-radius: 50%/90px;
       background-color: white;
       transform: scale(1, 0.6);
-      z-index: ;
+      z-index: 8;
     }
     
     .rim::after {
@@ -102,6 +98,22 @@
       border-radius: 50%;
       background-color: blue;
       transform: scale(1, 0.87);
+      z-index: 7;
+    }
+    
+    .rim::before {
+      content: '';
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      top: 100px;
+      transform: scale(1, 0.6);
+      
+      
+      background: black;
+      border-radius: 50%;
+      filter: blur(450px);
+      z-index: -1;
     }
     
     .button:active {
@@ -119,7 +131,6 @@
       <div class="button-bin">
       
         <div class="button"></div>
-        
         
       </div>
       
