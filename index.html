@@ -60,6 +60,8 @@
       
       cursor: pointer;
       transition: padding 0.5s ease-in-out, transform 0.5s ease-in-out;
+      border: none;
+    
       
     }
     
@@ -151,8 +153,8 @@
     <div class="frame">
       
       <div class="button-bin">
-      
-        <div class="button"></div>
+        
+        <button id="myButton" class="button"></button>
         
         <div class="shadow"></div>
                 
@@ -183,5 +185,19 @@
 <script>
   
   alert("Sign says do not press the button. ")
+  
+  
+let hasClicked = false;
+
+        document.getElementById("myButton").addEventListener("click", function() {
+            if (!hasClicked) {
+                // First click: Show popup
+                alert("Really? It literally says do not press.");
+                hasClicked = true;
+            } else {
+                // Second click: Redirect to a different link
+                window.location.href = "https://manuelapinheiro.github.io/self-destruct/"; // Replace with your desired URL
+            }
+        });
 
 </script>
