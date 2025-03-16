@@ -30,6 +30,7 @@
     
     .frame {
       position: relative;
+      display: flex;
       width: 1000px;
       height: 700px;
       border: 1px solid black;
@@ -37,7 +38,7 @@
     }
     
     .button-bin {
-      width: 100vw;
+      width: 100%;
       position: absolute;
       display: flex;
       justify-content: center;
@@ -51,7 +52,6 @@
       width: 300px;
       height: 385px;
       top: 150px;
-       
       
       border-radius: 50%/90px;
       background: linear-gradient(90deg, rgba(177,26,26,1) 0%, rgba(230,30,30,1) 50%, rgba(177,26,26,1) 100%);
@@ -62,7 +62,6 @@
       transition: padding 0.5s ease-in-out, transform 0.5s ease-in-out;
       border: none;
     
-      
     }
     
     .button::before {
@@ -79,7 +78,7 @@
     }
     
     .rim-bin {
-      width: 100vw;
+      width: 100%;
       position: absolute;
       display: flex;
       justify-content: center;
@@ -184,7 +183,7 @@
 
 <script>
   
-  alert("Sign says do not press the button. ")
+  alert("Sign says do not press the button.")
   
   
 let hasClicked = false;
